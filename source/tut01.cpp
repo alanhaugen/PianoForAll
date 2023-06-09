@@ -7,37 +7,8 @@ Tut01::Tut01()
 
 void Tut01::Init()
 {
-    Array<IDrawable::Vertex> vertices;
-    Array<unsigned int> indices;
-    Array<String> shaders(2);
-
-    vertices.Add(IDrawable::Vertex(glm::vec3( 1.0f,  1.0f, -1.0f)));
-    vertices.Add(IDrawable::Vertex(glm::vec3( 1.0f, -1.0f, -1.0f)));
-    vertices.Add(IDrawable::Vertex(glm::vec3(-1.0f, -1.0f, -1.0f)));
-
-    String vertexShader(
-        "#version 330\n"
-        "layout(location = 0) in vec4 position;\n"
-        "void main()\n"
-        "{\n"
-        "   gl_Position = position;\n"
-        "}\n"
-    );
-
-    String fragmentShader(
-        "#version 330\n"
-        "out vec4 outputColor;\n"
-        "void main()\n"
-        "{\n"
-        "   outputColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
-        "}\n"
-    );
-
-    shaders.Insert(vertexShader, VERTEX_SHADER);
-    shaders.Insert(fragmentShader, FRAGMENT_SHADER);
-
     triangle = renderer->CreateDrawable(vertices, indices, shaders, NULL);
-    description = new Text("TUT01 - PRESS SPACE FOR NEXT SCENE");
+    description = new Text("PIANO GAME");
 
     camera = new Camera();
 
