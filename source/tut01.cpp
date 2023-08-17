@@ -7,9 +7,19 @@ Tut01::Tut01()
 
 void Tut01::Init()
 {
-    description = new Text("PIANO GAME");
-    piano       = new Piano();
+    description = new Text(
+        "\
+        GETTING TO KNOW THE KEYBOARD\
+        \
+        FIND MIDDLE C.\
+        \
+        THE C NOT NEAREST THE CENTRE IS THE C KEY, NEXT TO TWO BLACK KEYS.\
+        \
+        IT IS GENERALLY JUST SLIGHTLY LEFT TO THE MIDDLE OF YOUR KEYBOARD.\
+        "
+                          );
 
+    piano  = new Piano();
     camera = new Camera();
 
     components.Add(description);
