@@ -7,12 +7,13 @@ Tut01::Tut01()
 
 void Tut01::Init()
 {
-    triangle = renderer->CreateDrawable(vertices, indices, shaders, NULL);
     description = new Text("PIANO GAME");
+    piano       = new Piano();
 
     camera = new Camera();
 
     components.Add(description);
+    components.Add(piano);
     components.Add(camera);
 }
 

@@ -4,13 +4,14 @@
 #include <core/x-platform/scene.h>
 #include <core/components/camera.h>
 #include <core/components/text.h>
+#include "piano.h"
 
 class Tut01 : public IScene
 {
 private:
     Camera *camera;
-    IDrawable *triangle;
     Text *description;
+    Piano *piano;
 
 public:
     Tut01();
