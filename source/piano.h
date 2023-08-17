@@ -4,6 +4,9 @@
 #include <core/components/cube.h>
 #include <core/containers/array.h>
 
+const unsigned int WHITE_KEYS_QUANTITY = 52;
+const unsigned int BLACK_KEYS_QUANTITY = 36;
+
 class Piano : public Component
 {
 public:
