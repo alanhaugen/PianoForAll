@@ -19,8 +19,6 @@ void Tut01::Init()
 
 void Tut01::Update()
 {
-    renderer->Draw(triangle);
-
     if (input.Pressed(input.Key.SPACE))
     {
         Application::NextScene();
