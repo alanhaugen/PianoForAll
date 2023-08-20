@@ -9,7 +9,7 @@ Piano::Piano()
     {
         whiteKeys[i].matrix.Translate(glm::vec3(-20.0f + i, -5.0f, -10.0f));
         whiteKeys[i].matrix.Scale(glm::vec3(1, 1, 3));
-        whiteKeys[i].matrix.Rotate(glm::radians(155.0f), glm::vec3(1,0,0));
+        //whiteKeys[i].matrix.Rotate(0.4f, glm::vec3(1.0f,0.0f,0.0f));
     }
 
     for (int i = 0; i < BLACK_KEYS_QUANTITY; i++)
@@ -23,6 +23,7 @@ void Piano::Update()
     for (int i = 0; i < WHITE_KEYS_QUANTITY; i++)
     {
         whiteKeys[i].Update();
+        whiteKeys[i].Uniform("colour", glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
     }
 };
 
