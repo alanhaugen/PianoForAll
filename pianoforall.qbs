@@ -35,6 +35,12 @@ solid {
             "data/vertexanimation.vert",
             "source/main.cpp",
             "source/main.h",
+            "source/piano.cpp",
+            "source/piano.h",
+            "source/pianokey.cpp",
+            "source/pianokey.h",
+            "source/tut01.cpp",
+            "source/tut01.h",
         ]
 
         Depends { name: "core"  }
