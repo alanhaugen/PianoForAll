@@ -16,8 +16,7 @@ void Tut01::Init()
         THE C NOT NEAREST THE CENTRE IS THE C KEY, NEXT TO TWO BLACK KEYS.\
         \
         IT IS GENERALLY JUST SLIGHTLY LEFT TO THE MIDDLE OF YOUR KEYBOARD.\
-        "
-                          );
+        ");
 
     piano  = new Piano();
     camera = new Camera();

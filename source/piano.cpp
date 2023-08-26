@@ -1,4 +1,4 @@
-#include "Piano.h"
+#include "piano.h"
 
 Piano::Piano()
 {
@@ -7,8 +7,8 @@ Piano::Piano()
 
     for (int i = 0; i < WHITE_KEYS_QUANTITY; i++)
     {
-        whiteKeys[i].matrix.Translate(glm::vec3(-20.0f + i, -5.0f, -10.0f));
-        whiteKeys[i].matrix.Scale(glm::vec3(1, 1, 3));
+        whiteKeys[i].key.matrix.Translate(glm::vec3(-20.0f + i, -5.0f, -10.0f));
+        whiteKeys[i].key.matrix.Scale(glm::vec3(1, 1, 3));
         //whiteKeys[i].matrix.Rotate(0.4f, glm::vec3(1.0f,0.0f,0.0f));
     }
 
@@ -22,8 +22,8 @@ void Piano::Update()
 {
     for (int i = 0; i < WHITE_KEYS_QUANTITY; i++)
     {
-        whiteKeys[i].Update();
-        whiteKeys[i].Uniform("colour", glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+        whiteKeys[i].key.Update();
+        whiteKeys[i].key.Uniform("colour", glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
     }
 };
 
